@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXUS — Serverless Future</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-dot"></div>
+
+  <!-- Scanline overlay -->
+  <div class="scanline"></div>
+
+  <!-- 3D Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ===== NAV ===== -->
+  <nav>
+    <div class="nav-logo">NEXUS</div>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#stack">Tech Stack</a></li>
+      <li><a href="#cta">Deploy</a></li>
+    </ul>
+    <div class="nav-badge">SERVERLESS v2.0</div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="line-1">BUILD THE</span>
+          <span class="line-2">FUTURE</span>
+          <span class="line-3">WITHOUT SERVERS</span>
+        </h1>
+        <p class="hero-sub">
+          Deploy scalable, high-performance applications with zero server management.
+          Focus on code — let the cloud handle the rest.
+        </p>
+        <div class="hero-cta">
+          <button class="btn-primary" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">Explore Architecture</button>
+          <button class="btn-secondary" onclick="document.getElementById('stack').scrollIntoView({behavior:'smooth'})">View Tech Stack</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-target="99.9">0</span>
+            <span class="stat-label">% Uptime SLA</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="0">∞</span>
+            <span class="stat-label">Servers to Manage</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="10">0</span>
+            <span class="stat-label">x Faster Deploys</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Go Serverless?</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <div class="feature-title">Auto Scaling</div>
+          <p class="feature-desc">Instantly scales from zero to millions of requests with no manual provisioning. Your app grows exactly as demand grows.</p>
+          <span class="feature-tag">ELASTIC COMPUTE</span>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💸</div>
+          <div class="feature-title">Pay-Per-Use</div>
+          <p class="feature-desc">Never pay for idle time. Billing is based purely on actual execution — milliseconds of compute, gigabytes of transfer.</p>
+          <span class="feature-tag">COST EFFICIENT</span>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌐</div>
+          <div class="feature-title">Edge Delivery</div>
+          <p class="feature-desc">Deploy to 300+ edge locations worldwide. Users get sub-50ms responses regardless of geography.</p>
+          <span class="feature-tag">GLOBAL CDN</span>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <div class="feature-title">Zero-Trust Security</div>
+          <p class="feature-desc">Built-in DDoS protection, WAF, SSL, and IAM policies. Security is baked into the architecture, not bolted on.</p>
+          <span class="feature-tag">ENTERPRISE GRADE</span>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <div class="feature-title">CI/CD Native</div>
+          <p class="feature-desc">Push to deploy. Git-integrated pipelines with atomic deploys, rollbacks, and preview environments per branch.</p>
+          <span class="feature-tag">DEVOPS READY</span>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <div class="feature-title">Observability</div>
+          <p class="feature-desc">Real-time logs, distributed tracing, and performance dashboards. Full visibility into every invocation.</p>
+          <span class="feature-tag">MONITORING</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section id="how">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">How It Works</h2>
+      </div>
+      <div class="flow-diagram">
+        <div class="flow-step" style="--delay:0s">
+          <div class="flow-num">01</div>
+          <div class="flow-icon">📝</div>
+          <div class="flow-title">Write Functions</div>
+          <p class="flow-desc">Author event-driven functions in Node.js, Python, Go, or Rust. No boilerplate servers.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step" style="--delay:0.1s">
+          <div class="flow-num">02</div>
+          <div class="flow-icon">🚀</div>
+          <div class="flow-title">Push & Deploy</div>
+          <p class="flow-desc">One git push triggers the pipeline. Functions package, test, and deploy in under 30 seconds.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step" style="--delay:0.2s">
+          <div class="flow-num">03</div>
+          <div class="flow-icon">⚡</div>
+          <div class="flow-title">Events Trigger</div>
+          <p class="flow-desc">HTTP, queues, cron schedules, file uploads — any event wakes up your function instantly.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step" style="--delay:0.3s">
+          <div class="flow-num">04</div>
+          <div class="flow-icon">📈</div>
+          <div class="flow-title">Auto Scale</div>
+          <p class="flow-desc">Cloud infrastructure handles concurrency, retries, and load balancing — completely managed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TECH STACK ===== -->
+  <section id="stack">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Recommended Stack</h2>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-category">
+          <div class="stack-cat-label">Frontend</div>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-dot accent"></span>Next.js / Astro</div>
+            <div class="stack-item"><span class="stack-dot accent"></span>React / Svelte</div>
+            <div class="stack-item"><span class="stack-dot accent"></span>TailwindCSS</div>
+            <div class="stack-item"><span class="stack-dot accent"></span>Three.js / WebGL</div>
+          </div>
+        </div>
+        <div class="stack-category">
+          <div class="stack-cat-label">Functions</div>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-dot purple"></span>AWS Lambda</div>
+            <div class="stack-item"><span class="stack-dot purple"></span>Vercel Edge Fn</div>
+            <div class="stack-item"><span class="stack-dot purple"></span>Cloudflare Workers</div>
+            <div class="stack-item"><span class="stack-dot purple"></span>Netlify Functions</div>
+          </div>
+        </div>
+        <div class="stack-category">
+          <div class="stack-cat-label">Database</div>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-dot pink"></span>PlanetScale</div>
+            <div class="stack-item"><span class="stack-dot pink"></span>Supabase</div>
+            <div class="stack-item"><span class="stack-dot pink"></span>Upstash Redis</div>
+            <div class="stack-item"><span class="stack-dot pink"></span>DynamoDB</div>
+          </div>
+        </div>
+        <div class="stack-category">
+          <div class="stack-cat-label">Storage & Auth</div>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-dot amber"></span>Cloudflare R2</div>
+            <div class="stack-item"><span class="stack-dot amber"></span>AWS S3</div>
+            <div class="stack-item"><span class="stack-dot amber"></span>Clerk / Auth0</div>
+            <div class="stack-item"><span class="stack-dot amber"></span>Stripe Payments</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section id="cta">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-glow"></div>
+        <span class="section-num">// READY TO DEPLOY?</span>
+        <h2 class="cta-title">Launch Your Serverless App Today</h2>
+        <p class="cta-sub">No servers. No ops team. No limits. Just ship.</p>
+        <div class="cta-terminal">
+          <div class="terminal-bar">
+            <span class="t-dot red"></span>
+            <span class="t-dot amber"></span>
+            <span class="t-dot green"></span>
+            <span class="t-label">bash</span>
+          </div>
+          <div class="terminal-body">
+            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd" id="typed-cmd"></span><span class="t-cursor">█</span></div>
+            <div class="t-line t-output" id="t-out-1"></div>
+            <div class="t-line t-output" id="t-out-2"></div>
+            <div class="t-line t-output success" id="t-out-3"></div>
+          </div>
+        </div>
+        <button class="btn-primary btn-large">Start Building Free</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">NEXUS</div>
+        <div class="footer-copy">© 2025 NEXUS SYSTEMS. SERVERLESS FUTURE. ABHISHEK SABLE</div>
+        <div class="footer-links">
+          <a href="#">Docs</a>
+          <a href="https://github.com/a6hxin">GitHub</a>
+          <a href="#">Discord</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
