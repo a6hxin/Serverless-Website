@@ -1,4 +1,4 @@
-#Serverless Website
+## Serverless Website
 
 A simple serverless website built using **HTML, CSS, and JavaScript**. This project demonstrates how to create a lightweight, fast, and responsive website without using any backend server.
 
