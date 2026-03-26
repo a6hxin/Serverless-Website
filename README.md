@@ -4,7 +4,7 @@ A simple serverless website built using **HTML, CSS, and JavaScript**. This proj
 
 ***Live Demo*** :- 
 
-Previews:- ![alt text](preview1.png) ![alt text](preview2.png) ![alt text](preview3.png)
+Previews:- ![alt text](preview3.png) ![alt text](preview4.png) ![alt text](preview5.png)
 ## Features
 
 Static HTML structure  
