@@ -2,7 +2,7 @@
 
 A simple serverless website built using **HTML, CSS, and JavaScript**. This project demonstrates how to create a lightweight, fast, and responsive website without using any backend server.
 
-***Live Demo*** :- https://servelite.vercel.app
+***Live Demo*** :- https://servelite.vercel.app (Refresh)
 
 Previews:- ![alt text](preview3.png) ![alt text](preview4.png) ![alt text](preview5.png)
 ## Features
